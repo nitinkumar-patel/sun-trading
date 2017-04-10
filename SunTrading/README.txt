@@ -1,7 +1,13 @@
+@ Nitinkumar
+
+In the README.txt, this project includes the artifacts for the 2 tasks: 
+
+----------------------------- 
+
 Task-1: SQL Exercise
 
 Please Open SQL_Exercise.txt 
-————————————————————————————-
+----------------------------- 
 
 Task-2: Development Exercise:
 
