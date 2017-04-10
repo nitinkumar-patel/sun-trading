@@ -1,5 +1,8 @@
-# python_application
 
-Open SunTrading directory
+Following Tasks covered in this repo: 
 
-follow README.txt
+1) SQL Exercise
+
+2) Development Applicaton Exercise:
+
+  - this exercise in Python. this code runs in a Linux environment.

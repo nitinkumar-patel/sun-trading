@@ -1,31 +1,45 @@
-Task-1: SQL Exercise.txt 
-————————————————————————————
+Task-1: SQL Exercise
 
-Task-2:
+Please Open SQL_Exercise.txt 
+————————————————————————————-
 
-for UNIX/LINUX environment:
+Task-2: Development Exercise:
 
-Execution steps:
+	for UNIX/LINUX environment:
 
-1. First resolve the dependencies by running the 'requirements.txt' through a packaging solution like pip.
-Command is 'pip install -r requirements.txt'
+	Execution steps:
 
-2. Move to the “Main” folder.
+	1. First resolve the dependencies by running the 'requirements.txt' through a packaging solution like pip.
+	Command is 'pip install -r requirements.txt'
 
-3. Run the tradediff.py from the console.
-Command is 'python tradediff.py'
+	2. Move to the “Main” folder.
 
-4. The packaged solution can be privately shared which is available in the dist folder.
+	3. Run the tradediff.py from the console.
+		Command is 'python tradediff.py'
 
-5. To make the package publicly available, follow following steps.
-	5.1. Run the command from console, 'python setup.py register'
-	5.2. You will be given the following options.
-		 1. use your existing login,
-		 2. register as a new user,
-		 3. have the server generate a new password for you (and email it to you), or
-		 4. quit
-		Select any one of them.
+	4. Run the file setup.py:
+		Using this command: "python setup.py sdist"
 
-6. You can also create a windows installable file using the setup.py. Run the below command to create a installable by the name 'bdist_wininst'.
-	'python setup.py sdist bdist_wininst upload'
+	5. A shareable package will be created into "dist" directory.
+
+	6. It will also create "MANIFEST" file for the project
+
+	7. The packaged solution can be privately shared which is available in the dist folder.
+
+	8. To make the package publicly available, follow following steps.
+		5.1. Run the command from console, 'python setup.py register'
+		5.2. You will be given the following options.
+			 1. use your existing login,
+			 2. register as a new user,
+			 3. have the server generate a new password for you (and email it to you), or
+			 4. quit
+			Select any one of them.
+
+	9. You can also create a windows installable file using the setup.py. Run the below command to create a installable by the name 'bdist_wininst'.
+		'python setup.py sdist bdist_wininst upload'
+	
+	10. the log file is created in the logs folder with the name trade_diff.log
+		- at every low level operation, a log entry is appended to the log file
+
+	11. The Final Result should be visible as Result.html
 
