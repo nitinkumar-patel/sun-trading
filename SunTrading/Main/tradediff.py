@@ -91,7 +91,7 @@ class TradeDiff:
         comp_df['Our Count'] = comp_df.apply(self.json_Sourced, axis = 1)
         comp_df['Exchange Count'] = comp_df.apply(self.csv_Sourced, axis = 1)
         del comp_df['_merge']
-        columns = ["TradeDate","Exchange","Symbol","Buy/Sell","Price","Quantity","Our Count","Exchange Count"]
+        columns = ["TradeDate","Exchange","Symbol","Buy/Sell","Quantity","Price","Our Count","Exchange Count"]
         comp_df.columns = columns
         comp_df = comp_df.sort_values(by = columns)
         print type(comp_df)
