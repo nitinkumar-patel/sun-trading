@@ -64,3 +64,5 @@ join Departments d on e.DepartmentID = d.DepartmentID
 join Departments d2 on e2.DepartmentID = d2.DepartmentID
 where e.BossID != 0 
 and d.DepartmentID != d2.DepartmentID
+
+6. select name, sum(salary) as Total from (select d.name ,e.salary from employees e inner join departments d where e.DepartmentID = d.DepartmentID) group by name
