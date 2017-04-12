@@ -54,10 +54,10 @@ Task-2: Development Exercise:
 
 	11. The Final Result should be visible as Result.html
 
-	12. As well as The Final Result store as "tradediff.db" database format into "SunTradding/db" directory. Also youw will get result on console.
+	12. The Final Result is also stored in "tradediff.db" file which is located in "SunTrading/db" directory. Also you will get result on console.
 
 		steps for accessing database tradediff.db file into terminal: 
-			12. 1. open differt terminal
+			12. 1. open different terminal
 			12. 2. go to SunTrading/db directory
 			12. 3. run command sqlite
 					1. >> .open tradediff.db
