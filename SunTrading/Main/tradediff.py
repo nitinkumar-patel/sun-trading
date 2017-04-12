@@ -4,12 +4,22 @@
 Created on Sun Apr 9 12:48:00 2017
 
 @author: Nitinkumar
+
+tradediff version 1.0.2
 """
 import pandas as pd
 import json
 import urllib
 import os
 import logging
+import sqlite3
+try: 
+	dbpath=os.path.abspath(os.path.join(os.getcwd(), os.pardir)) + '/db/tradediff.db'
+	print "database file location: ", dbpath
+	conn = sqlite3.connect(dbpath)
+#c = conn.cursor()
+except:
+	print ('Failed to identify /db path for the tradediff.db, Check if the folder is created and permissions are available')
 
 path=os.path.abspath(os.path.join(os.getcwd(), os.pardir))+'/logs'
 try:
@@ -94,8 +104,11 @@ class TradeDiff:
         columns = ["TradeDate","Exchange","Symbol","Buy/Sell","Quantity","Price","Our Count","Exchange Count"]
         comp_df.columns = columns
         comp_df = comp_df.sort_values(by = columns)
-        print type(comp_df)
-        print comp_df
+        # storing our data into sqlite
+        comp_df.to_sql('tradediff',con = conn, index = False, if_exists='replace')
+        # accessing stroed data through table
+        df = pd.read_sql_query('SELECT * FROM tradediff',conn)
+        print df
         htmlfile = os.path.join(os.getcwd(), os.pardir) + '/result.html'
         try:
             with open(htmlfile, 'w') as fo:
@@ -112,4 +125,7 @@ class TradeDiff:
         t.find_changes(df_json, df_csv)
 
 if __name__ == '__main__':
+    
+    #Run this for the first time
+    #createdb()
     TradeDiff(json_url, csv_url).trade_diff()
