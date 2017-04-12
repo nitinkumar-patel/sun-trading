@@ -18,7 +18,12 @@ Task-2: Development Exercise:
 	1. First resolve the dependencies by running the 'requirements.txt' through a packaging solution like pip.
 	Command is 'pip install -r requirements.txt'
 
-	2. Move to the “Main” folder.
+	[ Note: please make sure logs and db folder exist into SunTrading directory. if not please create it. Run following two command:
+		mkdir db
+		mkdir logs
+		]
+
+	2. Move to the “Main” folder. 
 
 	3. Run the tradediff.py from the console.
 		Command is 'python tradediff.py'
@@ -48,4 +53,16 @@ Task-2: Development Exercise:
 		- at every low level operation, a log entry is appended to the log file
 
 	11. The Final Result should be visible as Result.html
+
+	12. As well as The Final Result store as "tradediff.db" database format into "SunTradding/db" directory. Also youw will get result on console.
+
+		steps for accessing database tradediff.db file into terminal: 
+			12. 1. open differt terminal
+			12. 2. go to SunTrading/db directory
+			12. 3. run command sqlite
+					1. >> .open tradediff.db
+					2. type sql query 
+						>> SELECT * FROM tradediff
+						Finally, you will get result of the table on console.
+		
 
