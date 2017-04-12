@@ -17,8 +17,8 @@ Execution steps:
 	Command is 'python tradediff_0.py'	
 
 After succussfully execution: three csv file would be create 
-				[1. csv_filter_file.csv 2. json_filter_file.csv 3. final
-As well as, we can see the final Result file in CSV format [final_result.csv] with one more column Resource. [ which records from which resources (Outer or Exchange count)]
+				[1. csv_filter_file.csv 2. json_filter_file.csv [As intermideate result stored]
+				also we can see the final Result file in CSV format [3. final_result.csv] with one more column Resource[which has records from which resources (Outer or Exchange count)].
 
 4. Implemented html_view function [commented]: I am planing to implement the code without using pandas framework.
 
