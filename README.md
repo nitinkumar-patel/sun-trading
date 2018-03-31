@@ -10,4 +10,5 @@ Following Tasks covered in this repo:
 ------
 Other different way to implement same task:
 
-3) alternate implemetation version_1.0.0 added into Alternate_implementaion directory. Please, follow Readme.txt file from that folder. 
+3) Alternate implemetation version_1.0.0 added into Alternate_implementaion directory. 
+   Please, follow Readme.txt file from that folder. 
